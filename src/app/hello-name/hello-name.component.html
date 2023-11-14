@@ -1,0 +1,43 @@
+<div class="nameDiv">
+    <div>
+        <h1>Hello</h1>
+        <h1 [style.textAlign]="align" [style.fontFamily]="font" [style.font-size]="size+'px'">{{name}}</h1>
+    </div>
+    <div>
+        <form>
+            <section>
+                <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input matInput type="text" (keyup)="onKey($event)">
+                </mat-form-field>
+            </section>
+            <section>
+                <h2>Font</h2>
+                <mat-form-field>
+                    <mat-label>Choose an option</mat-label>
+                    <mat-select [value]="'Arial'" (selectionChange)="changeFont($event)">
+                        <mat-option value="Arial">Arial</mat-option>
+                        <mat-option value="Times New Roman">Times New Roman</mat-option>
+                        <mat-option value="Impact">Impact</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </section>
+            <section>
+                <h2>Size</h2>
+                <mat-form-field>
+                    <mat-label>Size</mat-label>
+                    <input matInput type="text" (change)="changeSize($event)">
+                </mat-form-field>
+            </section>
+            <section>
+                <h2>Align</h2>
+                <mat-radio-group [value]="'center'" (change)="changeAlign($event)">
+                    <mat-radio-button value="left">Left</mat-radio-button>
+                    <mat-radio-button value="center">Center</mat-radio-button>
+                    <mat-radio-button value="right">Right</mat-radio-button>
+                </mat-radio-group>
+            </section>
+            <br>
+        </form>
+    </div>
+</div>

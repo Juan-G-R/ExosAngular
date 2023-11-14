@@ -1,0 +1,45 @@
+header h1 {
+    text-align: center;
+    font-size: 50px;
+    margin: 20px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td {
+    padding: 50px;
+    width: 500px;
+}
+
+textarea {
+    width: 500px;
+}
+
+.historical {
+    height: 500px;
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.historical-item {
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.historical-text {
+    font-size: 30px;
+    float: left;
+    margin-left: 20px;
+}
+
+.historical-button {
+    float: right;
+    background-color: transparent;
+    border: none;
+    margin-right: 20px;
+}

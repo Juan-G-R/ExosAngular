@@ -1,0 +1,63 @@
+<div class="nameDiv">
+    <header>
+        <h1>Calculator</h1>
+    </header>
+    <table>
+        <tr>
+            <th>
+                <div>
+                    <form>
+                        <section>
+                            <mat-form-field>
+                                <mat-label>Number 1</mat-label>
+                                <input matInput type="number" (keyup)="changeNum1($event)">
+                            </mat-form-field>
+                        </section>
+                        <section>
+                            <h2>Opertation</h2>
+                            <mat-form-field>
+                                <mat-label>Choose an operator</mat-label>
+                                <mat-select [value]="'Arial'" (selectionChange)="changeOperation($event)">
+                                    <mat-option value="+">+</mat-option>
+                                    <mat-option value="-">-</mat-option>
+                                    <mat-option value="*">*</mat-option>
+                                    <mat-option value="/">/</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </section>
+                        <section>
+                            <mat-form-field>
+                                <mat-label>Number 2</mat-label>
+                                <input matInput type="number" (keyup)="changeNum2($event)">
+                            </mat-form-field>
+                        </section>
+                        <section>
+                            <h1>Result</h1>
+                            <mat-form-field>
+                                <mat-label>{{result}}</mat-label>
+                                <input readonly matInput type="number">
+                            </mat-form-field>
+                        </section>
+                        <section>
+                            <button id="basic" type="button" (click)="calculeResult()" mat-raised-button>
+                                Calculate
+                            </button>
+                        </section>
+                        <br>
+                    </form>
+                </div>
+            </th>
+            <th>
+                <cdk-virtual-scroll-viewport itemSize="25" class="historical">
+                    <div *cdkVirtualFor="let item of historyList" class="historical-item">
+                        <div class="historical-text">{{ item }}</div>
+                        <button class="historical-button"><mat-icon aria-hidden="false" aria-label="Example home icon"
+                                fontIcon="close" (click)="removeData(item)"></mat-icon>
+                        </button>
+                    </div>
+                </cdk-virtual-scroll-viewport>
+            </th>
+        </tr>
+    </table>
+
+</div>

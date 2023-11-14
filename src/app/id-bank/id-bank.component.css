@@ -1,0 +1,14 @@
+main{
+    margin-left:50px;
+    margin-right: 50px;
+}
+
+.mainText{
+    font-size:40px;
+}
+
+.infoContainer{
+    border:1px solid black;
+    border-radius: 20px;
+    padding:20px;
+}
